@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GADS Weather</title>
+  <meta name="theme-color" content="#4682b4" />
+  <meta name="apple-mobile-web-app-status-bar" content="#4682b4" />
+  <meta name="description" content="A weather PWA for GADS 2020">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <div class="side-overlay"></div>
+  <div class="toastbox"></div>
+  <div class="loader">
+    <div class="lds-ripple">
+      <div></div>
+      <div></div>
+    </div>
+    loading...
+  </div>
+  <header>
+    <div class="container">
+      <h2>Weather App.</h2>
+      <button class="side-toggle">History</button>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="side">
+        <details>
+          <summary>Recent Searches</summary>
+          <ul class="recent-search"></ul>
+          <small class="no-r">no searches made</small>
+          <button class="clear" aria-label="search button">Clear </button>
+        </details>
+      </div>
+      <div id="app-wrapper">
+        <div class="input-wrapper">
+          <input type="search" id="searchbox" placeholder="Search for a city ...">
+          <button id="searchBtn" class="btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="25px"
+              height="30px">
+              <path fill="#98ccfd"
+                d="M3.499,38.5c-0.534,0-1.036-0.208-1.414-0.585S1.5,37.035,1.5,36.501s0.208-1.036,0.585-1.414 l18.233-17.382l1.983,1.985L4.904,37.923C4.535,38.292,4.033,38.5,3.499,38.5z" />
+              <path fill="#4788c7"
+                d="M20.31,18.405l1.293,1.294L4.559,37.561C4.276,37.844,3.899,38,3.499,38 c-0.4,0-0.777-0.156-1.06-0.439c-0.584-0.584-0.584-1.535-0.017-2.103L20.31,18.405 M20.327,17.007L1.732,34.734 c-0.976,0.976-0.976,2.558,0,3.534v0C2.22,38.756,2.859,39,3.499,39c0.64,0,1.279-0.244,1.767-0.732L23,19.683L20.327,17.007 L20.327,17.007z" />
+              <path fill="#dff0fe"
+                d="M26,26.5c-6.893,0-12.5-5.607-12.5-12.5S19.107,1.5,26,1.5S38.5,7.107,38.5,14S32.893,26.5,26,26.5z" />
+              <path fill="#4788c7"
+                d="M26,2c6.617,0,12,5.383,12,12s-5.383,12-12,12s-12-5.383-12-12S19.383,2,26,2 M26,1 c-7.18,0-13,5.82-13,13c0,7.18,5.82,13,13,13s13-5.82,13-13C39,6.82,33.18,1,26,1L26,1z" />
+              </svg></button>
+        </div>
+
+        <div class="location">
+          <h3></h3>
+          <div class="empty">
+            <h4>Results will be displayed here.</h4>
+
+          </div>
+          <small class="date"></small>
+        </div>
+        <div class="details">
+
+          <h1 class="temperature"></h1>
+          <div class="icon"></div>
+          <h3 class="weather"></h3>
+          <p class="hi-lo"></p>
+          <h3 class="daily-title">Daily Report:</h3>
+        </div>
+        <ul class="daily-weather-container"></ul>
+      </div>
+    </div>
+  </main>
+  <script src="./assets/js/script.js"></script>
+  <script src="./serviceWorker.js"></script>
+</script></body>
+
+</html>
