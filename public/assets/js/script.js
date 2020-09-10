@@ -18,7 +18,7 @@ const App = {
   details: document.querySelector("details"),
   clear: document.querySelector(".clear"),
   api: {
-    key:"d5c5f62780a4d329efe68c35e32ec2a7",
+    key:"API Key Here",
     baseurl: "https://api.openweathermap.org/data/2.5/",
     dataurl:
       "https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid={ YOUR API KEY }",
